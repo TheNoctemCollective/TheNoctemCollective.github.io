@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="noctem-logo.png">
-<title>The Noctem Collective: Management for Actors</title>
+<title>The Noctem Collective: Production &amp; Social Media</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
@@ -264,7 +264,7 @@
     max-width: 52ch;
   }
 
-  /* ---------- Discipline tiles (Talent/Marketing-style blocks) ---------- */
+  /* ---------- Discipline tiles (Frame / Feed) ---------- */
   .tiles{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
@@ -272,11 +272,14 @@
     background: var(--hairline-dim);
     border: 1px solid var(--hairline-dim);
   }
+  .tiles-two{
+    grid-template-columns: repeat(2, 1fr);
+  }
   @media (max-width: 860px){ .tiles{ grid-template-columns: 1fr; } }
 
   .tile{
     background: var(--black);
-    padding: 48px 38px;
+    padding: 56px 46px;
     transition: background 0.3s ease, box-shadow 0.3s ease;
   }
   .tile:hover{
@@ -290,10 +293,16 @@
     color: var(--garnet-bright);
     margin-bottom: 24px;
   }
+  .tile .role{
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    color: var(--iron);
+    margin-bottom: 10px;
+  }
   .tile h3{
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
   .tile p{
     color: var(--bone-dim);
@@ -346,32 +355,32 @@
   }
   .step p{ color: var(--bone-dim); margin:0; font-size: 1.05rem; }
 
-  /* ---------- Roster request band ---------- */
-  .roster-band{
+  /* ---------- Selected work band ---------- */
+  .work-band{
     background: var(--black-3);
     border-top: 1px solid var(--hairline);
     border-bottom: 1px solid var(--hairline);
     padding: 90px 0;
     text-align: center;
   }
-  .roster-band .eyebrow{
+  .work-band .eyebrow{
     font-size: 0.76rem;
     color: var(--garnet-bright);
     margin-bottom: 22px;
   }
-  .roster-band h2{
+  .work-band h2{
     font-size: clamp(1.8rem, 4vw, 3rem);
     text-transform: uppercase;
     max-width: 16ch;
     margin: 0 auto;
   }
-  .roster-band p{
+  .work-band p{
     margin: 24px auto 0;
     max-width: 48ch;
     color: var(--bone-dim);
     font-size: 1.1rem;
   }
-  .roster-band .cta-row{ justify-content: center; }
+  .work-band .cta-row{ justify-content: center; }
 
   /* ---------- Contact ---------- */
   .contact-grid{
@@ -505,7 +514,7 @@
       <span>Noctem<em>.</em></span>
     </div>
     <div class="navlinks">
-      <a href="#discipline">Management</a>
+      <a href="#discipline">Frame &amp; Feed</a>
       <a href="#approach">Approach</a>
       <a href="#process">Process</a>
       <a class="cta" href="#contact">Get In Touch</a>
@@ -518,17 +527,17 @@
     <div class="hero-inner">
       <div class="eyebrow caps tagline">Unearth Your Potential.</div>
       <h1>
-        <span class="line">Representation</span>
-        <span class="line">for the hours</span>
-        <span class="line"><span class="accent">after the</span></span>
-        <span class="line"><span class="accent">credits roll</span></span>
+        <span class="line">We <span class="accent">frame</span></span>
+        <span class="line">the work,</span>
+        <span class="line">and <span class="accent">feed</span></span>
+        <span class="line">the audience.</span>
       </h1>
-      <p>The Noctem Collective is a boutique management house for actors, handling the deals, the details, and the noise, so you can stay in the work.</p>
+      <p>The Noctem Collective produces original film and content for actors, then builds the presence to make sure it gets seen.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#contact">Get In Touch</a>
         <a class="btn btn-ghost" href="#discipline">What We Handle</a>
       </div>
-      <div class="hero-meta caps">Talent · Management · Los Angeles</div>
+      <div class="hero-meta caps">Production · Social Media · Los Angeles</div>
     </div>
   </div>
 </section>
@@ -542,25 +551,22 @@
 <section class="alt" id="discipline">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow caps">What We Handle</div>
-      <h2>Three disciplines, one point of contact</h2>
+      <div class="eyebrow caps">Frame &amp; Feed</div>
+      <h2>Two crafts, one collective</h2>
       <p>No hand-offs between departments: the person who answers your call is the person doing the work.</p>
     </div>
 
-    <div class="tiles">
+    <div class="tiles tiles-two">
       <div class="tile">
         <div class="num">01</div>
-        <h3>Management</h3>
-        <p>Coordination with agents and casting offices, scheduling built around tape deadlines and callbacks, and a standing view of where your career is headed over the next year, not just the next audition.</p>
+        <div class="role caps">Production</div>
+        <h3>Frame</h3>
+        <p>We develop and produce original film and content projects, packaging talent with material, connecting financing, and creating opportunities that don't start with waiting on a casting call.</p>
       </div>
       <div class="tile">
         <div class="num">02</div>
-        <h3>Production</h3>
-        <p>We develop and produce original film projects for our roster, packaging talent with material, connecting financing, and creating opportunities that don't start with waiting on a casting call.</p>
-      </div>
-      <div class="tile">
-        <div class="num">03</div>
-        <h3>Social Media</h3>
+        <div class="role caps">Social Media</div>
+        <h3>Feed</h3>
         <p>Your dedicated social media manager is backed by agentic tools that monitor your accounts around the clock, surface relevant moments, and draft content at a pace no single person can sustain manually, extending their reach without replacing their judgment. Every piece of content is reviewed and edited by your manager before it goes out, so the presence stays authentically yours while the scope of what we can cover expands well beyond a typical nine-to-five.</p>
       </div>
     </div>
@@ -578,12 +584,12 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow caps">The Approach</div>
-      <h2>Built for a small roster, on purpose</h2>
+      <h2>Two crafts, held to one standard</h2>
     </div>
     <div class="manifesto">
-      <p>We built Noctem for actors who are done being one of forty names on a roster, waiting on a callback from an assistant's assistant.</p>
-      <p>Every client works directly with the same person from the first read through the final signature, including at 11pm the night before a table read, because that is when this industry actually happens.</p>
-      <footer>Client rosters stay deliberately small as we grow</footer>
+      <p>A reel that never gets seen sits in a drawer. A following built on nothing to show for it doesn't hold. So every project we take on gets both sides of the same coin.</p>
+      <p>Something worth framing, produced with real care, and the reach to make sure it finds an audience, built by the same small team from the first shoot day through the last post.</p>
+      <footer>Production and social media, held to the same standard</footer>
     </div>
   </div>
 </section>
@@ -592,7 +598,7 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow caps">Getting Started</div>
-      <h2>How representation begins</h2>
+      <h2>How a project begins</h2>
       <p>Three steps, no obligation until the last one.</p>
     </div>
     <div class="steps">
@@ -604,24 +610,24 @@
       <div class="step">
         <div class="step-num-plain">02</div>
         <h3>Alignment</h3>
-        <p>We lay out exactly what representation with Noctem would look like: availability, focus areas, and what we'll expect from each other.</p>
+        <p>We lay out exactly what working with Noctem would look like: availability, focus areas, and what we'll expect from each other.</p>
       </div>
       <div class="step">
         <div class="step-num-plain">03</div>
-        <h3>Representation</h3>
-        <p>Paperwork signed, and we get to work: on the opportunities already on the table, and the ones we go find next.</p>
+        <h3>Kickoff</h3>
+        <p>Agreement signed, and we get to work: on the first frame and the first post, and everything that follows after.</p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="roster-band">
+<div class="work-band">
   <div class="wrap">
-    <div class="eyebrow caps">The Roster</div>
+    <div class="eyebrow caps">Selected Work</div>
     <h2>Available on request, not on display</h2>
-    <p>Noctem represents a small group of working actors. Out of respect for their privacy, we share the full roster in conversation, not on a public page.</p>
+    <p>Noctem works with a small group of actors on production and social media. Out of respect for their privacy, we share examples of our work in conversation, not on a public page.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="#contact">Request The Roster</a>
+      <a class="btn btn-primary" href="#contact">Request Examples</a>
     </div>
   </div>
 </div>
@@ -663,7 +669,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-nav">
-        <a href="#discipline">Management</a>
+        <a href="#discipline">Frame &amp; Feed</a>
         <a href="#approach">Approach</a>
         <a href="#process">Process</a>
         <a href="#contact">Contact</a>
