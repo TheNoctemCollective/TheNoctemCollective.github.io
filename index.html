@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Noctem Collective — Management for Actors</title>
+<link rel="icon" type="image/png" href="noctem-logo.png">
+<title>The Noctem Collective: Management for Actors</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
@@ -36,7 +37,7 @@
     position: relative;
   }
 
-  /* grain overlay — single deliberate texture pass */
+  /* grain overlay: single deliberate texture pass */
   body::after{
     content: '';
     position: fixed;
@@ -106,6 +107,14 @@
     letter-spacing: 0.22em;
     text-transform: uppercase;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .brand-mark{
+    height: 34px;
+    width: auto;
+    display: block;
   }
   .brand em{
     font-style: normal;
@@ -322,23 +331,12 @@
   }
   @media (max-width: 820px){ .steps{ grid-template-columns: 1fr; gap: 44px; } }
 
-  .step-num{
-    position: relative;
-    width: 52px;
-    height: 62px;
-    margin-bottom: 26px;
-  }
-  .step-num svg{ width:100%; height:100%; }
-  .step-num span{
-    position: absolute;
-    inset:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+  .step-num-plain{
     font-family:'Cinzel', serif;
-    font-size: 0.95rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
     color: var(--garnet-bright);
-    padding-bottom: 8px;
+    margin-bottom: 24px;
   }
 
   .step h3{
@@ -475,6 +473,16 @@
   .footer-social{ display:flex; gap: 20px; }
   .footer-social a{ text-decoration:none; color: var(--bone-dim); }
   .footer-social a:hover{ color: var(--garnet-bright); }
+  .footer-mark{
+    display:flex;
+    align-items:center;
+    gap: 12px;
+  }
+  .footer-crest{
+    height: 20px;
+    width: auto;
+    opacity: 0.85;
+  }
 
   :focus-visible{
     outline: 2px solid var(--garnet-bright);
@@ -492,7 +500,10 @@
 
 <header>
   <nav class="nav">
-    <div class="brand">Noctem<em>.</em></div>
+    <div class="brand">
+      <img src="noctem-logo.png" alt="The Noctem Collective crest" class="brand-mark">
+      <span>Noctem<em>.</em></span>
+    </div>
     <div class="navlinks">
       <a href="#discipline">Management</a>
       <a href="#approach">Approach</a>
@@ -512,7 +523,7 @@
         <span class="line"><span class="accent">after the</span></span>
         <span class="line"><span class="accent">credits roll</span></span>
       </h1>
-      <p>The Noctem Collective is a boutique management house for actors — handling the deals, the details, and the noise, so you can stay in the work.</p>
+      <p>The Noctem Collective is a boutique management house for actors, handling the deals, the details, and the noise, so you can stay in the work.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#contact">Get In Touch</a>
         <a class="btn btn-ghost" href="#discipline">What We Handle</a>
@@ -533,24 +544,24 @@
     <div class="section-head">
       <div class="eyebrow caps">What We Handle</div>
       <h2>Three disciplines, one point of contact</h2>
-      <p>No hand-offs between departments — the person who answers your call is the person doing the work.</p>
+      <p>No hand-offs between departments: the person who answers your call is the person doing the work.</p>
     </div>
 
     <div class="tiles">
       <div class="tile">
         <div class="num">01</div>
         <h3>Management</h3>
-        <p>Coordination with agents and casting offices, scheduling built around tape deadlines and callbacks, and a standing view of where your career is headed over the next year — not just the next audition.</p>
+        <p>Coordination with agents and casting offices, scheduling built around tape deadlines and callbacks, and a standing view of where your career is headed over the next year, not just the next audition.</p>
       </div>
       <div class="tile">
         <div class="num">02</div>
         <h3>Production</h3>
-        <p>We develop and produce original film projects for our roster — packaging talent with material, connecting financing, and creating opportunities that don't start with waiting on a casting call.</p>
+        <p>We develop and produce original film projects for our roster, packaging talent with material, connecting financing, and creating opportunities that don't start with waiting on a casting call.</p>
       </div>
       <div class="tile">
         <div class="num">03</div>
         <h3>Social Media</h3>
-        <p>A content strategy built around your actual work and calendar, brand partnership vetting, and a second set of eyes before anything goes out publicly.</p>
+        <p>Your dedicated social media manager is backed by agentic tools that monitor your accounts around the clock, surface relevant moments, and draft content at a pace no single person can sustain manually, extending their reach without replacing their judgment. Every piece of content is reviewed and edited by your manager before it goes out, so the presence stays authentically yours while the scope of what we can cover expands well beyond a typical nine-to-five.</p>
       </div>
     </div>
   </div>
@@ -571,7 +582,7 @@
     </div>
     <div class="manifesto">
       <p>We built Noctem for actors who are done being one of forty names on a roster, waiting on a callback from an assistant's assistant.</p>
-      <p>Every client works directly with the same person from the first read through the final signature — including at 11pm the night before a table read, because that is when this industry actually happens.</p>
+      <p>Every client works directly with the same person from the first read through the final signature, including at 11pm the night before a table read, because that is when this industry actually happens.</p>
       <footer>Client rosters stay deliberately small as we grow</footer>
     </div>
   </div>
@@ -586,28 +597,19 @@
     </div>
     <div class="steps">
       <div class="step">
-        <div class="step-num">
-          <svg viewBox="0 0 52 62" fill="none"><path d="M2,60 L2,26 Q26,2 50,26 L50,60" stroke="#7A1F2B" stroke-opacity="0.6" stroke-width="1.4"/></svg>
-          <span>01</span>
-        </div>
+        <div class="step-num-plain">01</div>
         <h3>Introduction</h3>
-        <p>A conversation — over a call or in person — to understand where your career is now and where you want to take it. No pitch deck, no pressure.</p>
+        <p>A conversation, over a call or in person, to understand where your career is now and where you want to take it. No pitch deck, no pressure.</p>
       </div>
       <div class="step">
-        <div class="step-num">
-          <svg viewBox="0 0 52 62" fill="none"><path d="M2,60 L2,26 Q26,2 50,26 L50,60" stroke="#7A1F2B" stroke-opacity="0.6" stroke-width="1.4"/></svg>
-          <span>02</span>
-        </div>
+        <div class="step-num-plain">02</div>
         <h3>Alignment</h3>
         <p>We lay out exactly what representation with Noctem would look like: availability, focus areas, and what we'll expect from each other.</p>
       </div>
       <div class="step">
-        <div class="step-num">
-          <svg viewBox="0 0 52 62" fill="none"><path d="M2,60 L2,26 Q26,2 50,26 L50,60" stroke="#7A1F2B" stroke-opacity="0.6" stroke-width="1.4"/></svg>
-          <span>03</span>
-        </div>
+        <div class="step-num-plain">03</div>
         <h3>Representation</h3>
-        <p>Paperwork signed, and we get to work — on the opportunities already on the table, and the ones we go find next.</p>
+        <p>Paperwork signed, and we get to work: on the opportunities already on the table, and the ones we go find next.</p>
       </div>
     </div>
   </div>
@@ -617,7 +619,7 @@
   <div class="wrap">
     <div class="eyebrow caps">The Roster</div>
     <h2>Available on request, not on display</h2>
-    <p>Noctem represents a small group of working actors. Out of respect for their privacy, we share the full roster in conversation — not on a public page.</p>
+    <p>Noctem represents a small group of working actors. Out of respect for their privacy, we share the full roster in conversation, not on a public page.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="#contact">Request The Roster</a>
     </div>
@@ -631,10 +633,6 @@
         <h2>Let's Talk</h2>
         <p>Tell us a little about where you are and what you're looking for. We read every message ourselves.</p>
         <div class="contact-detail">
-          <div>
-            <span class="caps">Email</span>
-            <a href="mailto:TheNoctemCollective@proton.me">TheNoctemCollective@proton.me</a>
-          </div>
           <div>
             <span class="caps">Based In</span>
             Los Angeles, working with clients everywhere
@@ -677,7 +675,10 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© 2026 The Noctem Collective. All Rights Reserved.</div>
+      <div class="footer-mark">
+        <img src="noctem-logo.png" alt="The Noctem Collective crest" class="footer-crest">
+        <span>© 2026 The Noctem Collective. All Rights Reserved.</span>
+      </div>
       <div class="footer-social">
         <a href="#" aria-label="Instagram">Instagram</a>
         <a href="#" aria-label="LinkedIn">LinkedIn</a>
@@ -693,7 +694,7 @@
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
     const subject = encodeURIComponent('New inquiry from ' + name);
-    const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+    const body = encodeURIComponent(message + '\n\nFrom: ' + name + ' (' + email + ')');
     window.location.href = 'mailto:TheNoctemCollective@proton.me?subject=' + subject + '&body=' + body;
   });
 </script>
