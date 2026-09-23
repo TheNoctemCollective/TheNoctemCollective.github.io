@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="noctem-logo.png">
+<title>Terms of Service — The Noctem Collective</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black: #040404;
+    --black-2: #0A0A0C;
+    --black-3: #0F0F13;
+    --garnet: #7A1F2B;
+    --garnet-bright: #A5323F;
+    --bone: #E8E2D6;
+    --bone-dim: #B9B2A4;
+    --iron: #6B6870;
+    --hairline: rgba(122, 31, 43, 0.4);
+    --hairline-dim: rgba(232, 226, 214, 0.1);
+    --max: 1180px;
+    --prose: 720px;
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--black);
+    color: var(--bone);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .display{
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    margin: 0;
+  }
+  .caps{
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 500;
+  }
+  a{ color: var(--garnet-bright); }
+  .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 40px; }
+  @media (max-width: 640px){ .wrap{ padding: 0 22px; } }
+
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(4, 4, 4, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--hairline-dim);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 22px 40px;
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+  @media (max-width: 640px){ .nav{ padding: 18px 22px; } }
+  .brand{
+    font-family:'Cinzel', serif;
+    font-size: 1rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--bone);
+  }
+  .brand-mark{ height: 30px; width: auto; display: block; }
+  .brand em{ font-style: normal; color: var(--garnet-bright); }
+  .navlinks{ display:flex; align-items: center; gap: 30px; font-size: 0.7rem; }
+  .navlinks a{ text-decoration:none; color: var(--bone-dim); }
+  .navlinks a:hover, .navlinks a:focus-visible{ color: var(--bone); }
+
+  main{ padding: 70px 0 110px; }
+  .legal-head{ max-width: var(--prose); margin: 0 auto 56px; }
+  .legal-head .eyebrow{ font-size: 0.76rem; color: var(--garnet-bright); margin-bottom: 16px; }
+  .legal-head h1{ font-size: clamp(2.1rem, 5vw, 3rem); text-transform: uppercase; }
+  .legal-head .updated{ margin-top: 18px; font-size: 0.85rem; color: var(--iron); }
+
+  .prose{ max-width: var(--prose); margin: 0 auto; }
+  .prose h2{
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--bone);
+    margin-top: 48px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--hairline-dim);
+  }
+  .prose h2:first-child{ margin-top: 0; }
+  .prose p{ color: var(--bone-dim); margin: 0 0 16px; font-size: 1.05rem; }
+  .prose ul{ color: var(--bone-dim); margin: 0 0 16px; padding-left: 22px; font-size: 1.05rem; }
+  .prose li{ margin-bottom: 8px; }
+  .prose strong{ color: var(--bone); font-weight: 600; }
+
+  .tbd{
+    color: var(--garnet-bright);
+    border-bottom: 1px dashed var(--garnet-bright);
+    font-style: italic;
+  }
+  .callout{
+    border: 1px solid var(--hairline);
+    background: var(--black-2);
+    padding: 20px 24px;
+    margin: 0 0 40px;
+    font-size: 0.98rem;
+    color: var(--bone-dim);
+  }
+  .callout strong{ color: var(--bone); }
+
+  footer.site{ padding: 50px 0 40px; border-top: 1px solid var(--hairline-dim); }
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.72rem;
+    color: var(--iron);
+  }
+  .footer-bottom a{ color: var(--iron); text-decoration: none; }
+  .footer-bottom a:hover{ color: var(--garnet-bright); }
+  .footer-links{ display:flex; gap: 20px; flex-wrap: wrap; }
+
+  :focus-visible{ outline: 2px solid var(--garnet-bright); outline-offset: 3px; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <img src="noctem-logo.png" alt="The Noctem Collective crest" class="brand-mark">
+      <span>Noctem<em>.</em></span>
+    </a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="legal-head">
+      <div class="eyebrow caps">Legal</div>
+      <h1>Terms of Service</h1>
+      <div class="updated">Last updated: September 23, 2026</div>
+    </div>
+
+    <div class="prose">
+      <div class="callout">
+        <strong>Draft, not yet reviewed by counsel.</strong> This describes how Noctem Social actually works today.
+        Fields marked <span class="tbd">like this</span> — governing-law jurisdiction, formal dispute-resolution
+        terms, the registered legal entity — need a lawyer's input before this is published as binding.
+      </div>
+
+      <h2>1. Acceptance of these terms</h2>
+      <p>
+        By creating an account or using the Noctem Social app, you agree to these Terms of Service and our
+        <a href="privacy.html">Privacy Policy</a>. If you don't agree, don't use the app.
+      </p>
+
+      <h2>2. What Noctem Social is</h2>
+      <p>
+        Noctem Social is a self-service app: it helps you research social trends, draft captions with the help of
+        Claude (an AI model made by Anthropic), and publish approved posts to your own connected Instagram, TikTok,
+        and Threads accounts. It is not a managed service — no Noctem staff review, edit, or approve your posts;
+        that decision is always yours.
+      </p>
+
+      <h2>3. AI-generated content</h2>
+      <p>
+        Trend research, industry news summaries, and draft captions are written by Claude, not a person. They are
+        starting points, not guaranteed-accurate or guaranteed-appropriate content. <strong>You are solely
+        responsible for reviewing and editing any draft before you tap "Post Now."</strong> Once you approve and
+        publish a post, it's yours — Noctem Social is not responsible for the content of anything you choose to
+        publish.
+      </p>
+
+      <h2>4. Eligibility and your account</h2>
+      <p>
+        You must be at least 18 years old to create an account. <span class="tbd">[to be reviewed — confirm minimum
+        age and whether a lower age with guardian consent should be supported]</span>. You're responsible for
+        keeping your login credentials secure and for all activity under your account.
+      </p>
+
+      <h2>5. Third-party platforms</h2>
+      <p>
+        Publishing to Instagram, TikTok, or Threads through Noctem Social is subject to each platform's own terms
+        of service and community guidelines, which you're responsible for following. We use Ayrshare as our posting
+        provider — see our <a href="privacy.html">Privacy Policy</a> for what that means for your data. We aren't
+        responsible for actions those platforms take on your account (suspension, content removal, etc.).
+      </p>
+
+      <h2>6. Acceptable use</h2>
+      <p>You agree not to use Noctem Social to:</p>
+      <ul>
+        <li>Generate or publish content that's illegal, harassing, or infringes someone else's rights;</li>
+        <li>Attempt to access another user's account or data;</li>
+        <li>Interfere with or disrupt the app, its servers, or the third-party services it relies on; or</li>
+        <li>Use the app in a way that violates the terms of any connected platform (Instagram, TikTok, Threads).</li>
+      </ul>
+      <p>We may suspend or terminate accounts that violate this section.</p>
+
+      <h2>7. Your content</h2>
+      <p>
+        You retain ownership of the captions, photos, and videos you post through Noctem Social. By publishing
+        through the app, you're directing us (via Ayrshare) to transmit that content to your connected platforms on
+        your behalf — we don't claim any ownership over it.
+      </p>
+
+      <h2>8. Subscriptions and payment</h2>
+      <p>
+        Noctem Social does not currently charge for access. If we introduce a paid subscription in the future,
+        pricing, billing terms, and cancellation will be described here and in our <a href="refund.html">Refund
+        Policy</a> before you're charged anything.
+      </p>
+
+      <h2>9. Account termination and deletion</h2>
+      <p>
+        You can delete your account at any time from Profile → Delete Account in the app — this permanently removes
+        your account and the data tied to it, as described in our <a href="privacy.html">Privacy Policy</a>. We may
+        suspend or terminate your account if you violate these terms.
+      </p>
+
+      <h2>10. Disclaimers</h2>
+      <p>
+        Noctem Social is provided "as is," without warranties of any kind, express or implied. We don't guarantee
+        the accuracy of AI-generated trend research or captions, uninterrupted access to the app, or that
+        publishing to a connected platform will always succeed. <span class="tbd">[to be reviewed by counsel —
+        standard warranty-disclaimer language for your jurisdiction]</span>.
+      </p>
+
+      <h2>11. Limitation of liability</h2>
+      <p>
+        To the maximum extent permitted by law, The Noctem Collective is not liable for indirect, incidental, or
+        consequential damages arising from your use of the app, including content you choose to publish.
+        <span class="tbd">[to be reviewed by counsel — confirm liability cap and any carve-outs required in your
+        jurisdiction]</span>.
+      </p>
+
+      <h2>12. Governing law</h2>
+      <p>
+        These terms are governed by the laws of <span class="tbd">[to be added — state/jurisdiction]</span>, without
+        regard to conflict-of-law principles.
+      </p>
+
+      <h2>13. Changes to these terms</h2>
+      <p>
+        If we make a material change to these terms, we'll update the date at the top of this page and, where
+        required, notify you directly.
+      </p>
+
+      <h2>14. Contact us</h2>
+      <p>
+        The Noctem Collective, Los Angeles, CA<br>
+        <a href="mailto:TheNoctemCollective@proton.me">TheNoctemCollective@proton.me</a>
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-bottom">
+      <span>© 2026 The Noctem Collective. All Rights Reserved.</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="cookies.html">Cookie Policy</a>
+        <a href="refund.html">Refund Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
