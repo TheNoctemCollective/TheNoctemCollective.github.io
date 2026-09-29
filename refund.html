@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="noctem-logo.png">
+<title>Refund Policy: The Noctem Collective</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black: #040404;
+    --black-2: #0A0A0C;
+    --black-3: #0F0F13;
+    --garnet: #7A1F2B;
+    --garnet-bright: #A5323F;
+    --bone: #E8E2D6;
+    --bone-dim: #B9B2A4;
+    --iron: #6B6870;
+    --hairline: rgba(122, 31, 43, 0.4);
+    --hairline-dim: rgba(232, 226, 214, 0.1);
+    --max: 1180px;
+    --prose: 720px;
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--black);
+    color: var(--bone);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .display{
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    margin: 0;
+  }
+  .caps{
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 500;
+  }
+  a{ color: var(--garnet-bright); }
+  .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 40px; }
+  @media (max-width: 640px){ .wrap{ padding: 0 22px; } }
+
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(4, 4, 4, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--hairline-dim);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 22px 40px;
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+  @media (max-width: 640px){ .nav{ padding: 18px 22px; } }
+  .brand{
+    font-family:'Cinzel', serif;
+    font-size: 1rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--bone);
+  }
+  .brand-mark{ height: 30px; width: auto; display: block; }
+  .brand em{ font-style: normal; color: var(--garnet-bright); }
+  .navlinks{ display:flex; align-items: center; gap: 30px; font-size: 0.7rem; }
+  .navlinks a{ text-decoration:none; color: var(--bone-dim); }
+  .navlinks a:hover, .navlinks a:focus-visible{ color: var(--bone); }
+
+  main{ padding: 70px 0 110px; }
+  .legal-head{ max-width: var(--prose); margin: 0 auto 56px; }
+  .legal-head .eyebrow{ font-size: 0.76rem; color: var(--garnet-bright); margin-bottom: 16px; }
+  .legal-head h1{ font-size: clamp(2.1rem, 5vw, 3rem); text-transform: uppercase; }
+  .legal-head .updated{ margin-top: 18px; font-size: 0.85rem; color: var(--iron); }
+
+  .prose{ max-width: var(--prose); margin: 0 auto; }
+  .prose h2{
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--bone);
+    margin-top: 48px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--hairline-dim);
+  }
+  .prose h2:first-child{ margin-top: 0; }
+  .prose p{ color: var(--bone-dim); margin: 0 0 16px; font-size: 1.05rem; }
+  .prose ul{ color: var(--bone-dim); margin: 0 0 16px; padding-left: 22px; font-size: 1.05rem; }
+  .prose li{ margin-bottom: 8px; }
+  .prose strong{ color: var(--bone); font-weight: 600; }
+
+  .tbd{
+    color: var(--garnet-bright);
+    border-bottom: 1px dashed var(--garnet-bright);
+    font-style: italic;
+  }
+  .callout{
+    border: 1px solid var(--hairline);
+    background: var(--black-2);
+    padding: 20px 24px;
+    margin: 0 0 40px;
+    font-size: 0.98rem;
+    color: var(--bone-dim);
+  }
+  .callout strong{ color: var(--bone); }
+
+  footer.site{ padding: 50px 0 40px; border-top: 1px solid var(--hairline-dim); }
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.72rem;
+    color: var(--iron);
+  }
+  .footer-bottom a{ color: var(--iron); text-decoration: none; }
+  .footer-bottom a:hover{ color: var(--garnet-bright); }
+  .footer-links{ display:flex; gap: 20px; flex-wrap: wrap; }
+
+  :focus-visible{ outline: 2px solid var(--garnet-bright); outline-offset: 3px; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <img src="noctem-logo.png" alt="The Noctem Collective crest" class="brand-mark">
+      <span>Noctem<em>.</em></span>
+    </a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="legal-head">
+      <div class="eyebrow caps">Legal</div>
+      <h1>Refund Policy</h1>
+      <div class="updated">Last updated: September 23, 2026</div>
+    </div>
+
+    <div class="prose">
+      <div class="callout">
+        <strong>Forward-looking, not active billing terms.</strong> Noctem Social does not charge for access today,
+        so there is no subscription to refund. This policy describes the terms that will apply once a paid
+        subscription launches, written now so users know what to expect and so we don't scramble to write fair
+        terms under launch pressure. Fields marked <span class="tbd">like this</span> are real business decisions
+        that need to be made (and this page updated) before any billing goes live. They aren't filled in here, since
+        guessing at pricing/trial terms would just create a different policy than whatever actually ships.
+      </div>
+
+      <h2>1. No charges today</h2>
+      <p>
+        As of this writing, every feature of Noctem Social is free to use. Nothing in this policy is currently
+        being applied to any real charge, because no charges exist yet.
+      </p>
+
+      <h2>2. Free trials, if introduced</h2>
+      <p>
+        If Noctem Social ever offers a free trial that automatically converts into a paid subscription, we will
+        send you a reminder, by email or in-app notification, before you're charged, with enough notice to cancel
+        if you don't want to continue. You will never be silently charged at the end of a trial with no warning.
+      </p>
+
+      <h2>3. Cancellation</h2>
+      <p>
+        Canceling a paid subscription will take no more steps than starting one did. You'll be able to cancel
+        directly from your Profile in the app: no phone call, no support ticket required. Canceling stops future
+        billing; it does not retroactively refund charges already made except as described below.
+      </p>
+
+      <h2>4. Refund window</h2>
+      <p>
+        We intend to offer a <span class="tbd">[to be decided, e.g., a 14-day]</span> money-back window from the date
+        of a new subscription charge: request a refund within that window for any reason and we'll issue it in full.
+        Outside that window, subscription charges are generally non-refundable, except:
+      </p>
+      <ul>
+        <li>If we fail to deliver the service you paid for due to an error on our end;</li>
+        <li>If required by the law of your jurisdiction; or</li>
+        <li>At our discretion, on a case-by-case basis.</li>
+      </ul>
+      <p>
+        Renewal charges (after the first billing cycle) are handled the same way: request within the refund
+        window, and we'll issue it.
+      </p>
+
+      <h2>5. Partial periods</h2>
+      <p>
+        If you cancel mid-billing-cycle, you'll keep access through the end of the period you already paid for; we
+        don't currently plan to prorate refunds for unused time within a cycle outside the refund window above.
+        <span class="tbd">[to be decided: confirm this is the intended policy once real pricing exists]</span>.
+      </p>
+
+      <h2>6. How to request a refund</h2>
+      <p>
+        Email <a href="mailto:TheNoctemCollective@proton.me">TheNoctemCollective@proton.me</a> with your account
+        email and the reason for your request. We aim to respond within a few business days.
+      </p>
+
+      <h2>7. Changes to this policy</h2>
+      <p>
+        We'll update this page with real, final terms before any paid subscription launches, and note the change
+        date at the top of this page.
+      </p>
+
+      <h2>8. Contact us</h2>
+      <p>
+        The Noctem Collective, Los Angeles, CA<br>
+        <a href="mailto:TheNoctemCollective@proton.me">TheNoctemCollective@proton.me</a>
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-bottom">
+      <span>© 2026 The Noctem Collective. All Rights Reserved.</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="cookies.html">Cookie Policy</a>
+        <a href="refund.html">Refund Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
