@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="noctem-logo.png">
-<title>The Noctem Collective: Production &amp; Social Media</title>
-<meta name="description" content="The Noctem Collective produces original film and content for actors, then builds the social presence to make sure it gets seen.">
+<title>The Noctem Collective: Production &amp; Noctem Social</title>
+<meta name="description" content="The Noctem Collective produces original film and content for actors, and gives them Noctem Social, our own app for growing the audience that watches it.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -343,6 +343,120 @@
     .format-screen.tall{ height: 300px; }
   }
 
+  /* ---------- Noctem Social: the app demo in a phone frame ----------
+     The demo video isn't made yet. Until a <source> is added to the
+     <video> in the markup, the phone shows a placeholder: the app's own
+     tier ring sweeping round, in the app's brass. Once a source loads,
+     the script at the bottom swaps the video in. */
+  .showcase{
+    --brass: #D8B06A;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 48px clamp(40px, 7vw, 104px);
+    align-items: center;
+  }
+  .showcase h2{
+    font-size: var(--t-h2);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+  }
+  .showcase-copy > p{
+    margin-top: 16px;
+    font-size: var(--t-lead);
+    color: var(--bone-dim);
+    max-width: 26em;
+  }
+  .showcase-list{
+    list-style: none;
+    margin: 40px 0 0;
+    padding: 0;
+    max-width: 34em;
+  }
+  .showcase-list li{
+    padding: 22px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .showcase-list li:last-child{ border-bottom: 1px solid var(--rule); }
+  .showcase-list h3{ font-size: var(--t-lead); font-weight: 500; line-height: 1.2; }
+  .showcase-list p{ margin-top: 6px; color: var(--bone-dim); }
+
+  .demo-phone{
+    margin: 0;
+    width: clamp(240px, 24vw, 300px);
+  }
+  .demo-screen{
+    position: relative;
+    aspect-ratio: 9 / 16;
+    border-radius: 32px;
+    border: 1px solid rgba(232, 226, 214, 0.22);
+    background: var(--screen);
+    overflow: hidden;
+    box-shadow: 0 40px 90px -40px rgba(216, 176, 106, 0.18);
+  }
+  .demo-video{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .demo-placeholder{
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+  }
+  .demo-ring{ width: 78%; overflow: visible; }
+  .demo-ring .track{ fill: none; stroke: var(--rule); stroke-width: 1.5; }
+  .demo-ring .arc{
+    fill: none;
+    stroke: var(--brass);
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 502.65;
+    stroke-dashoffset: 140.74; /* 72% of the way round */
+    animation: demo-arc 6s cubic-bezier(.22, .7, .3, 1) infinite;
+  }
+  .demo-ring .tip{
+    transform-box: view-box;
+    transform-origin: 100px 100px;
+    transform: rotate(259.2deg);
+    animation: demo-tip 6s cubic-bezier(.22, .7, .3, 1) infinite;
+  }
+  .demo-ring .tip circle{ fill: var(--brass); stroke: var(--screen); stroke-width: 2.5; }
+  .demo-ring .sweep{ animation: demo-fade 6s linear infinite; }
+  .demo-ring text{
+    font-family: var(--wordmark);
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    fill: var(--bone);
+  }
+  .demo-ring .notch{ stroke: var(--ash); stroke-width: 1.5; stroke-linecap: round; }
+  @keyframes demo-arc{
+    0%{ stroke-dashoffset: 502.65; }
+    45%, 100%{ stroke-dashoffset: 140.74; }
+  }
+  @keyframes demo-tip{
+    0%{ transform: rotate(0deg); }
+    45%, 100%{ transform: rotate(259.2deg); }
+  }
+  @keyframes demo-fade{
+    0%, 85%{ opacity: 1; }
+    100%{ opacity: 0; }
+  }
+  .demo-caption{
+    margin-top: 16px;
+    text-align: center;
+    font-size: var(--t-small);
+    color: var(--ash);
+  }
+  .demo-phone.has-video .demo-placeholder{ display: none; }
+
+  @media (max-width: 860px){
+    .showcase{ grid-template-columns: 1fr; }
+    .demo-phone{ justify-self: center; width: min(280px, 78vw); }
+  }
+
   /* ---------- Approach ---------- */
   .approach{
     display: grid;
@@ -517,6 +631,7 @@
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior: auto; }
     .viewfinder, .hero-copy{ animation: none; }
+    .demo-ring .arc, .demo-ring .tip, .demo-ring .sweep{ animation: none; }
     *{ transition: none !important; }
   }
 </style>
@@ -531,6 +646,7 @@
     </a>
     <div class="navlinks">
       <a href="#frame-feed">Frame &amp; Feed</a>
+      <a href="#noctem-social">Noctem Social</a>
       <a href="#approach">Approach</a>
       <a href="#process">Process</a>
       <a class="btn" href="#contact">Get in touch</a>
@@ -586,10 +702,56 @@
             <div class="posts" aria-hidden="true"><span></span><span></span><span></span></div>
           </div>
         </div>
-        <p class="kind">Social media</p>
-        <p>A dedicated manager runs your accounts, backed by tools that watch them around the clock and draft content quickly. Nothing goes out until your manager has reviewed it, so it still sounds like you.</p>
+        <p class="kind">Noctem Social</p>
+        <p>Every actor we work with gets Noctem Social, software we built to grow your following and turn it into viewers for your projects. Each morning it finds what's working for actors on Instagram, TikTok and Threads, drafts posts in your voice, and shows you what's growing. Nothing posts until you approve it.</p>
       </article>
     </div>
+  </div>
+</section>
+
+<section class="section" id="noctem-social" aria-labelledby="ns-title">
+  <div class="wrap showcase">
+    <div class="showcase-copy">
+      <h2 id="ns-title">Noctem Social at work</h2>
+      <p>A short walk through the app our actors use every day.</p>
+      <ul class="showcase-list">
+        <li>
+          <h3>Today's ideas</h3>
+          <p>New ideas every morning, researched separately for Instagram, TikTok and Threads.</p>
+        </li>
+        <li>
+          <h3>Posts in your voice</h3>
+          <p>A caption written from the idea and rewritten around your own details. Nothing posts until you approve it.</p>
+        </li>
+        <li>
+          <h3>Your growth</h3>
+          <p>Followers, engagement and how close you are to the next tier, updated daily.</p>
+        </li>
+      </ul>
+    </div>
+
+    <figure class="demo-phone" id="demo">
+      <div class="demo-screen">
+        <!-- The app demo goes here once it's recorded. Add the file and a
+             <source>, and it replaces the placeholder below automatically:
+             <source src="media/noctem-social-demo.mp4" type="video/mp4"> -->
+        <video class="demo-video" muted loop playsinline preload="metadata" aria-label="Noctem Social app demo" hidden>
+        </video>
+
+        <div class="demo-placeholder" aria-hidden="true">
+          <svg class="demo-ring" viewBox="0 0 200 200">
+            <circle class="track" cx="100" cy="100" r="80"/>
+            <line class="notch" x1="100" y1="12" x2="100" y2="28"/>
+            <g class="sweep">
+              <circle class="arc" cx="100" cy="100" r="80" transform="rotate(-90 100 100)"/>
+              <g class="tip"><circle cx="100" cy="20" r="6"/></g>
+            </g>
+            <text x="100" y="105" text-anchor="middle">NOCTEM SOCIAL</text>
+          </svg>
+        </div>
+      </div>
+      <figcaption class="demo-caption">App demo coming soon</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -598,7 +760,7 @@
     <h2 id="approach-title">Why we do both</h2>
     <div class="approach-text">
       <p>A reel that never gets seen sits in a drawer. A following with nothing to show for it doesn't hold.</p>
-      <p>So every project gets both: something worth watching, produced with care, and the reach to find its audience, built by the same people from the first shoot day to the last post.</p>
+      <p>So every project gets both: something worth watching, produced with care, and Noctem Social working every day to build the audience that finds it.</p>
     </div>
   </div>
 </section>
@@ -626,7 +788,7 @@
         <span class="step-num">03</span>
         <span class="step-dot" aria-hidden="true"></span>
         <h3>Kickoff</h3>
-        <p>The agreement is signed and we start on the first frame and the first post.</p>
+        <p>The agreement is signed, we start on the first frame, and you're set up on Noctem Social.</p>
       </li>
     </ol>
   </div>
@@ -685,6 +847,7 @@
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <a href="#frame-feed">Frame &amp; Feed</a>
+        <a href="#noctem-social">Noctem Social</a>
         <a href="#approach">Approach</a>
         <a href="#process">Process</a>
         <a href="#contact">Contact</a>
@@ -706,6 +869,37 @@
     const body = encodeURIComponent(message + '\n\nFrom: ' + name + ' (' + email + ')');
     window.location.href = 'mailto:TheNoctemCollective@proton.me?subject=' + subject + '&body=' + body;
   });
+
+  // Noctem Social demo. Does nothing until a <source> is added to the
+  // video; then the video replaces the placeholder once it can play. It
+  // plays muted on a loop only while it's on screen. With reduced motion
+  // on, it doesn't autoplay and shows controls instead.
+  (function(){
+    const phone = document.getElementById('demo');
+    const video = phone.querySelector('video');
+    if (!video.querySelector('source')) return;
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const caption = phone.querySelector('.demo-caption');
+
+    video.addEventListener('loadeddata', function(){
+      video.hidden = false;
+      phone.classList.add('has-video');
+      caption.textContent = 'Noctem Social, as our actors use it';
+      if (reduceMotion) video.controls = true;
+    }, { once: true });
+
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      video.load();
+      return;
+    }
+    new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) video.play().catch(function(){});
+        else video.pause();
+      });
+    }, { threshold: 0.4 }).observe(video);
+  })();
 </script>
 
 </body>
